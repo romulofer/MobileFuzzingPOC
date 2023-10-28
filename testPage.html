@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+  </head>
+  <body>
+    <h1>Login Form</h1>
+    <label for="login">Login:</label>
+    <input type="text" id="login" autofocus /><br /><br />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" /><br /><br />
+
+    <button id="submitButton">OK</button>
+
+    <script>
+      // Get references to the input elements and the submit button
+      const loginInput = document.getElementById("login");
+      const passwordInput = document.getElementById("password");
+      const submitButton = document.getElementById("submitButton");
+
+      // Add a click event listener to the submit button
+      submitButton.addEventListener("click", function () {
+        // Check if the login and password are incorrect
+        if (
+          loginInput.value !== "your_username" ||
+          passwordInput.value !== "your_password"
+        ) {
+          alert("Wrong credentials");
+          loginInput.value = "";
+          passwordInput.value = "";
+          loginInput.focus();
+        }
+      });
+    </script>
+  </body>
+</html>
