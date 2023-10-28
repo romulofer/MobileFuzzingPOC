@@ -25,7 +25,9 @@ def typeCredentials(login, password):
   kbd.send(Keycode.TAB)
   kbd.send(Keycode.ENTER)
   time.sleep(1)
+  kbd.send(Keycode.TAB)
   kbd.send(Keycode.ENTER)
+  kbd.send(Keycode.TAB)
 
 ### MAIN LOOOP ###
 while True:
@@ -41,5 +43,3 @@ while True:
           time.sleep(1)
           led.value = False
     except: print("[-] Error")
-  else:   
-    print("[+] Button is not pressed")
