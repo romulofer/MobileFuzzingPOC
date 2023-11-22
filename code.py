@@ -34,6 +34,7 @@ def typeCredentials(login, password):
 ### MAIN LOOOP ###
 readyLED.value = True
 runningLED.value = False
+time.sleep(20)
 while True:
   if startButton.value == False: # If the startButton is pressed
     try:
